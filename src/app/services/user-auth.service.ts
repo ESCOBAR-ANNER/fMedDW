@@ -18,6 +18,10 @@ export class userAuthService {
     return this.http.post<any>(this.URL + '/login', user);
   }
 
+  actualizar(user:any){
+    return this.http.put<any>(this.URL+'/complete-profile',user);
+  }
+
   //ver si hay token
   loggedIng() {
     return !!localStorage.getItem('token');

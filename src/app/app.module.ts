@@ -7,10 +7,12 @@ import { SharedModuleModule } from './shared/shared-module/shared-module.module'
 import { authGuardian } from './auth.guard';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { HomeComponent } from './shared/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
