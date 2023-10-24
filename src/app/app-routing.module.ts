@@ -6,7 +6,8 @@ import { UserRouterModule } from './users/usersmodule/user-router-routing.module
 const routes: Routes = [
 
   {path:'users', loadChildren: () => import('./users/usersmodule/usersmodule.module').then(m => m.UsersmoduleModule)},
-  
+
+
 ];
 
 @NgModule({

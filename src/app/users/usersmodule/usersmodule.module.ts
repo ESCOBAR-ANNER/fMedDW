@@ -5,9 +5,9 @@ import { RegisterComponent } from '../register/register.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
 import { CompleteProfileComponent } from '../complete-profile/complete-profile.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { UserRouterModule } from './user-router-routing.module';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,9 @@ import { UserRouterModule } from './user-router-routing.module';
   ],
   imports: [
     CommonModule,
-    UserRouterModule
-    
+    UserRouterModule,
+    FormsModule,
+    HttpClientModule
   ],
   exports:[
     LoginComponent,
@@ -28,6 +29,8 @@ import { UserRouterModule } from './user-router-routing.module';
     ProfileComponent,
     ForgotPasswordComponent,
     CompleteProfileComponent,
+  ],
+  providers:[
   ]
 })
 export class UsersmoduleModule { }
