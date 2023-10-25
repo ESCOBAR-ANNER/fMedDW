@@ -10,6 +10,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PatientModule } from './patients/patient-module/patient.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { PatientProfileComponent } from './patients/patient-profile/patient-profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     FooterComponent,
     DashboardComponent,
     SidebarComponent,
+    PatientProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     UsersmoduleModule,
     HttpClientModule,
     PatientModule,
+    FormsModule
   ],
   providers: [
     authGuardian,

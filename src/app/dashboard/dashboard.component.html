@@ -1,2 +1,32 @@
-<<h1>DashborWorks</h1>
->
+<div class="p-4">
+  <h1 class="text-2xl font-semibold mb-4">Lista de Pacientes</h1>
+  <div class="bg-white p-4 shadow rounded-lg">
+    <!-- Barra de búsqueda -->
+    <div class="mb-4">
+      <input
+        class="w-full p-2 border rounded-lg"
+        type="text"
+        placeholder="Buscar pacientes"
+      />
+    </div>
+
+    <!-- Lista de pacientes -->
+    <div class="space-y-4">
+      <!-- Utiliza *ngFor para iterar a través de la lista de pacientes -->
+      <div *ngFor="let patient of patients" class="flex items-center border rounded-lg p-4">
+        <div class="w-10 h-10 rounded-full bg-gray-300"></div>
+        <div class="ml-4">
+          <!-- Muestra el nombre y la edad del paciente -->
+          <h2 class="text-lg font-semibold">{{ patient.name }}</h2>
+          <p>Edad: {{ patient.age }} años</p>
+        </div>
+        <div class="ml-auto">
+          <!-- Crea el enlace para ver más detalles del paciente -->
+          <a [routerLink]="['/patient-profile', patient._id]" class="text-blue-500 hover:underline">Ver más</a>
+        </div>
+      </div>
+
+      <!-- Repite el bloque anterior para más pacientes -->
+    </div>
+  </div>
+</div>

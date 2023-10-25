@@ -1,9 +1,11 @@
-<div>
-  <app-sidebar></app-sidebar>
+<div class="flex h-screen">
+  <div class="w-48 bg-gray-800 text-white">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="flex-1 p-4 overflow-y-auto">
+    <router-outlet></router-outlet>
+  </div>
 </div>
- <div>
-  <router-outlet></router-outlet>
-  </div>
-  <div>
-    <app-footer></app-footer>
-  </div>
+<div class="w-full bg-gray-800 text-white p-4">
+  <app-footer></app-footer>
+</div>

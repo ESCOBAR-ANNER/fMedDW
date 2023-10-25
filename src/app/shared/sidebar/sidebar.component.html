@@ -1,32 +1,22 @@
 <!-- sidebar.component.html -->
 
-<div class="h-screen w-64 bg-gray-800 text-white p-4">
+<div class="h-screen w-30 bg-gray-800 text-white p-2">
   <!-- Logo o título del sidebar -->
-  <div class="text-2xl font-semibold mb-4">Mi Sidebar</div>
+  <div class="text-2xl font-semibold mb-4"> <a routerLink="/dashbor">HOME</a></div>
   <!-- Enlaces de navegación -->
   <ul>
-    <li class="mb-2">
-      <a routerLink="/inicio" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
+    <li class="mb-2 w-full">
+      <a routerLink="/add-patient" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
         Registrar Paciente
       </a>
     </li>
     <li class="mb-2">
-      <a routerLink="/perfil" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
-        Ver Pacientes
-      </a>
-    </li>
-    <li class="mb-2">
-      <a routerLink="/ajustes" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
+      <a routerLink="/mi-profile" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
         Mi Perfil
       </a>
     </li>
     <li class="mb-2">
-      <a routerLink="/ajustes" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
-        Perfil
-      </a>
-    </li>
-    <li class="mb-2">
-      <a routerLink="/ajustes" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
+      <a (click)="deleteToken()" style="cursor: pointer;" routerLinkActive="text-indigo-500" class="text-white hover:text-indigo-500 block">
         Salir
       </a>
     </li>
