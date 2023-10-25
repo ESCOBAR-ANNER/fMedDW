@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { PatientRoutingModule } from './patient-routing.module';
 import { AddPatientComponent } from '../add-patient/add-patient.component';
 import { DeletePatientComponent } from '../delete-patient/delete-patient.component';
-import { ListPatientsComponent } from '../list-patients/list-patients.component';
 import { ModifyPatientComponent } from '../modify-patient/modify-patient.component';
 import { FormsModule } from '@angular/forms';
 
@@ -12,7 +11,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AddPatientComponent,
     DeletePatientComponent,
-    ListPatientsComponent,
     ModifyPatientComponent
   ],
   imports: [
@@ -23,7 +21,6 @@ import { FormsModule } from '@angular/forms';
   exports:[
     AddPatientComponent,
     DeletePatientComponent,
-    ListPatientsComponent,
     ModifyPatientComponent
   ]
 })

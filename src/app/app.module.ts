@@ -7,7 +7,7 @@ import { authGuardian } from './auth.guard';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { FooterComponent } from './shared/footer/footer.component';
-import { PatientModule } from './patients/patient-module/patient.module';
+import { PatientModule } from './patients/patient/patient.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { PatientProfileComponent } from './patients/patient-profile/patient-profile.component';

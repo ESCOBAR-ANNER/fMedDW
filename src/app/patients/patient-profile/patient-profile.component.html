@@ -3,7 +3,7 @@
   <div class="bg-white p-4 shadow rounded-lg">
     <!-- Foto de perfil -->
     <div class="mb-4">
-      <img [src]="patient.photo" [alt]="patient.name" (error)="loadBackupImage()" class="w-32 h-32 rounded-full mx-auto mb-2">
+      <img alt="Photo de perfil" [src]="patient.photo" [alt]="patient.name" (error)="loadBackupImage()" class="w-32 h-32 rounded-full mx-auto mb-2">
       <h2 class="text-lg font-semibold text-center">{{ patient.name }}</h2>
     </div>
 
@@ -26,9 +26,6 @@
         <li *ngFor="let entry of patient.history">{{ entry }}</li>
       </ul>
     </div>
-
-
-
     <!-- Alergias -->
     <div class="mb-4">
       <h2 class="text-lg font-semibold">Alergias</h2>
@@ -39,7 +36,7 @@
     <!-- Botones de acción -->
     <div class="flex items-center justify-center space-x-4">
       <button [routerLink]="['/update-patient', patient._id]" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Modificar</button>
-      <button routerLink="/delete-patient" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Eliminar</button>
+      <button [routerLink]="['/delete-patient', patientId]"   class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">Eliminar</button>
     </div>
   </div>
 </div>

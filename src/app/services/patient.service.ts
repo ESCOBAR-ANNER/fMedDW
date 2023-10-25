@@ -27,4 +27,7 @@ export class PatientService {
     return this.http.put<any>(this.URL + '/update-patient/' + patientId, updates);
   }
 
+  deletePatient(patientId: string) {
+    return this.http.delete<any>(this.URL + '/delete-patient/'+ patientId);
+  }
 }
